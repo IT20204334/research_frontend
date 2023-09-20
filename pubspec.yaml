@@ -1,0 +1,79 @@
+name: indoortracking
+description: A new Flutter project.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.14.0
+  fluttertoast: ^8.2.2
+  image_picker: ^1.0.0
+  dropdown_plus: ^0.0.9
+  shared_preferences: ^2.2.0
+  google_maps_flutter: ^2.3.1
+  cached_network_image: ^3.2.3
+  page_transition: ^2.0.9
+  flutter_datetime_picker_plus: ^2.0.1
+  geolocator: ^9.0.2
+  intl: ^0.18.1
+  toggle_switch: ^2.1.0
+  firebase_auth: ^4.6.3
+  firebase_database: ^10.2.3
+  form_validation: ^3.0.2+2
+  carousel_slider: ^4.2.1
+  expandable_text: ^2.3.0
+  firebase_storage: ^11.2.4
+  permission_handler: ^10.4.3
+  uuid: ^3.0.7
+  flutter_background_service: ^3.0.1
+  http: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icon.png"
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/user.png
+    - assets/images/logo.png
+    - assets/images/icon.png
+    - assets/images/pw.png
+    - assets/images/empty.png
+    - assets/images/default.png
+
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway/static/Raleway-Regular.ttf
+          weight: 400
+    - family: Raleway-Medium
+      fonts:
+        - asset: assets/fonts/Raleway/static/Raleway-Medium.ttf
+          weight: 500
+    - family: Raleway-SemiBold
+      fonts:
+        - asset: assets/fonts/Raleway/static/Raleway-SemiBold.ttf
+          weight: 600
+    - family: Raleway-Bold
+      fonts:
+        - asset: assets/fonts/Raleway/static/Raleway-Bold.ttf
+          weight: 700
+
