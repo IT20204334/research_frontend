@@ -8,6 +8,7 @@ import 'package:indoortracking/Models/Utils/Utils.dart';
 import 'package:indoortracking/Views/History/History.dart';
 import 'package:indoortracking/Views/Live/live_prediction.dart';
 import 'package:indoortracking/Views/ProductManagement/product_management.dart';
+import 'package:indoortracking/Views/peoplecount/TrafficMap.dart';
 
 class HomeDrawer extends StatefulWidget {
   int selection = 1;
@@ -123,6 +124,20 @@ class _HomeDrawerState extends State<HomeDrawer> {
                   size: 15.0,
                 ))
             : const SizedBox.shrink(),
+                ListTile(
+            leading: Icon(
+              Icons.logout,
+              color: color11,
+            ),
+            onTap: () {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => TrafficMap()));
+            },
+            title: const Text('Crowd Monitoring'),
+            trailing: Icon(
+              Icons.arrow_forward_ios,
+              color: color11,
+              size: 15.0,
+            )),
         ListTile(
             leading: Icon(
               Icons.logout,
