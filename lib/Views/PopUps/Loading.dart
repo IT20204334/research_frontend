@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:indoortracking/Models/Utils/Colors.dart';
 
 class Loading extends StatefulWidget {
+  const Loading({super.key});
+
   @override
   State<StatefulWidget> createState() => LoadingState();
 }

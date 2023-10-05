@@ -83,7 +83,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                   color: color11,
                 ),
                 onTap: () {
-                  Routes(context: context).navigate(ProductManagent());
+                  Routes(context: context).navigate(const ProductManagent());
                 },
                 title: const Text('Product Management'),
                 trailing: Icon(
@@ -99,7 +99,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                   color: color11,
                 ),
                 onTap: () {
-                  Routes(context: context).navigate(PredictionLive());
+                  Routes(context: context).navigate(const PredictionLive());
                 },
                 title: const Text('Upload Predictions'),
                 trailing: Icon(
@@ -115,7 +115,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                   color: color11,
                 ),
                 onTap: () {
-                  Routes(context: context).navigate(History());
+                  Routes(context: context).navigate(const History());
                 },
                 title: const Text('Prediction History'),
                 trailing: Icon(
@@ -130,7 +130,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
               color: color11,
             ),
             onTap: () {
-    Navigator.of(context).push(MaterialPageRoute(builder: (context) => TrafficMap()));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const TrafficMap()));
             },
             title: const Text('Crowd Monitoring'),
             trailing: Icon(

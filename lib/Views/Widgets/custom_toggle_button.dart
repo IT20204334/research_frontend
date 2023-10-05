@@ -3,7 +3,7 @@ import 'package:indoortracking/Models/Utils/Colors.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class CustomToggleButton extends StatefulWidget {
-  CustomToggleButton({Key? key}) : super(key: key);
+  const CustomToggleButton({Key? key}) : super(key: key);
 
   @override
   State<CustomToggleButton> createState() => _CustomToggleButtonState();

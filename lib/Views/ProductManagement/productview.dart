@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:indoortracking/Models/Utils/Colors.dart';
 import 'package:indoortracking/Models/Utils/Common.dart';
-import 'package:indoortracking/Models/Utils/Images.dart';
 import 'package:indoortracking/Models/Utils/Routes.dart';
-import 'package:indoortracking/Models/Utils/Utils.dart';
 import 'package:indoortracking/Views/ProductManagement/productmap.dart';
 
-import '../Widgets/custom_button.dart';
 
 class ProductView extends StatefulWidget {
   dynamic data;

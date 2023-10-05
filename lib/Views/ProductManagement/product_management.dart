@@ -228,20 +228,20 @@ class _DiseasesState extends State<ProductManagent> {
   final _formKey = GlobalKey<FormState>();
 
   Future<void> showEnrollment(key, dynamic savedRecord) async {
-    TextEditingController _name = TextEditingController();
-    TextEditingController _description = TextEditingController();
-    TextEditingController _price = TextEditingController();
+    TextEditingController name = TextEditingController();
+    TextEditingController description = TextEditingController();
+    TextEditingController price = TextEditingController();
 
-    final _imagePicker = ImagePicker();
+    final imagePicker = ImagePicker();
     XFile? image;
     Uint8List? imageUInts;
 
     final firebaseStorage = FirebaseStorage.instance;
 
     if (savedRecord != null) {
-      _name.text = savedRecord['name'];
-      _description.text = savedRecord['description'];
-      _price.text = savedRecord['price'];
+      name.text = savedRecord['name'];
+      description.text = savedRecord['description'];
+      price.text = savedRecord['price'];
     }
 
     await showModalBottomSheet<void>(
@@ -293,7 +293,7 @@ class _DiseasesState extends State<ProductManagent> {
                                   horizontal: 5.0, vertical: 5.0),
                               child: GestureDetector(
                                 onTap: () async {
-                                  await _imagePicker
+                                  await imagePicker
                                       .pickImage(source: ImageSource.gallery)
                                       .then((value) async {
                                     if (value != null) {
@@ -321,7 +321,7 @@ class _DiseasesState extends State<ProductManagent> {
                                   horizontal: 5.0, vertical: 5.0),
                               child: CustomTextFormField(
                                   height: 5.0,
-                                  controller: _name,
+                                  controller: name,
                                   backgroundColor: color7,
                                   iconColor: color3,
                                   isIconAvailable: true,
@@ -344,7 +344,7 @@ class _DiseasesState extends State<ProductManagent> {
                                   horizontal: 5.0, vertical: 5.0),
                               child: CustomTextFormField(
                                   height: 5.0,
-                                  controller: _description,
+                                  controller: description,
                                   backgroundColor: color7,
                                   iconColor: color3,
                                   isIconAvailable: true,
@@ -367,7 +367,7 @@ class _DiseasesState extends State<ProductManagent> {
                                   horizontal: 5.0, vertical: 5.0),
                               child: CustomTextFormField(
                                   height: 5.0,
-                                  controller: _price,
+                                  controller: price,
                                   backgroundColor: color7,
                                   iconColor: color3,
                                   isIconAvailable: true,
@@ -400,9 +400,9 @@ class _DiseasesState extends State<ProductManagent> {
                                     DatabaseReference ref = _databaseReference
                                         .child(FirebaseStructure.PRODUCTS);
                                     dynamic data = {
-                                      'name': _name.text,
-                                      'price': _price.text,
-                                      'description': _description.text,
+                                      'name': name.text,
+                                      'price': price.text,
+                                      'description': description.text,
                                     };
 
                                     if (savedRecord == null &&

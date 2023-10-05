@@ -1,5 +1,5 @@
 class APIRoutes {
-  static String _baseRoute = 'http://192.168.1.85:8001/api/';
+  static const String _baseRoute = 'http://192.168.1.85:8001/api/';
 
   static String getRoute(String key) {
     switch (key) {

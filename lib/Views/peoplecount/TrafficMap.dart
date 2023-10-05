@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:web_socket_channel/io.dart';
 
 class TrafficMap extends StatefulWidget {
+  const TrafficMap({super.key});
+
   @override
   _TrafficMapState createState() => _TrafficMapState();
 }
@@ -17,7 +19,7 @@ class _TrafficMapState extends State<TrafficMap> {
   }
 
   _connectWebSocket() async {
-    _channel = IOWebSocketChannel.connect('ws://127.0.0.1:12345');
+    _channel = IOWebSocketChannel.connect('ws://10.0.2.2:12345');
 
     _channel.stream.listen(
       (message) {
@@ -35,13 +37,13 @@ class _TrafficMapState extends State<TrafficMap> {
         setState(() {
           sectionCounts = [null, null, null, null, null, null, null, null];
         });
-        Future.delayed(Duration(seconds: 3), _connectWebSocket);
+        Future.delayed(const Duration(seconds: 3), _connectWebSocket);
       },
       onDone: () {
         setState(() {
           sectionCounts = [null, null, null, null, null, null, null, null];
         });
-        Future.delayed(Duration(seconds: 1), _connectWebSocket);
+        Future.delayed(const Duration(seconds: 1), _connectWebSocket);
       },
       cancelOnError: false,
     );
@@ -51,7 +53,7 @@ class _TrafficMapState extends State<TrafficMap> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/background.jpg'),
             fit: BoxFit.cover,
@@ -59,7 +61,7 @@ class _TrafficMapState extends State<TrafficMap> {
         ),
         child: Center(
           child: sectionCounts.contains(null)
-              ? CircularProgressIndicator() // Loading symbol
+              ? const CircularProgressIndicator() // Loading symbol
               : Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GridView.count(
@@ -78,7 +80,7 @@ class _TrafficMapState extends State<TrafficMap> {
                         child: Center(
                           child: Text(
                             count?.toString() ?? '',
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 36, fontWeight: FontWeight.bold),
                           ),
                         ),
