@@ -177,7 +177,7 @@ class _LoginState extends State<Login> {
                                 _username.text = '';
                                 _password.text = '';
                                 Routes(context: context)
-                                    .navigateReplace(Home());
+                                    .navigateReplace(const Home());
                               }
                             });
                           }
@@ -189,7 +189,7 @@ class _LoginState extends State<Login> {
                       alignment: Alignment.center,
                       child: GestureDetector(
                         onTap: () {
-                          Routes(context: context).navigate(BusinessRegister());
+                          Routes(context: context).navigate(const BusinessRegister());
                         },
                         child: const Text(
                           Login_register_button_text,

@@ -17,7 +17,7 @@ import '../Widgets/custom_button.dart';
 
 class PredictionLive extends StatefulWidget {
 
-  PredictionLive({Key? key}) : super(key: key);
+  const PredictionLive({Key? key}) : super(key: key);
 
   @override
   _DiseasesState createState() => _DiseasesState();

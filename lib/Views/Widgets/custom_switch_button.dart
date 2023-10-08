@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:indoortracking/Models/Utils/Colors.dart';
 
 class CustomSwitchButton extends StatefulWidget {
-  CustomSwitchButton({Key? key}) : super(key: key);
+  const CustomSwitchButton({Key? key}) : super(key: key);
 
   @override
   State<CustomSwitchButton> createState() => _CustomSwitchButtonState();

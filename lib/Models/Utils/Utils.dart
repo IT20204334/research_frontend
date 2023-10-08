@@ -68,7 +68,7 @@ class CustomUtils {
   static Future showLoader(context) async {
     await showDialog(
       context: context,
-      builder: (_) => Loading(),
+      builder: (_) => const Loading(),
     );
   }
 
@@ -141,7 +141,7 @@ class CustomUtils {
         children: [
           for (String message in contents)
             Padding(
-              padding: EdgeInsets.only(bottom: 5.0),
+              padding: const EdgeInsets.only(bottom: 5.0),
               child: Text(
                 message,
                 style:

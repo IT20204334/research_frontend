@@ -21,7 +21,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   late Timer _timer;
 
-  AuthController _authController = AuthController();
+  final AuthController _authController = AuthController();
 
   @override
   void initState() {
@@ -100,7 +100,7 @@ class _SplashScreenState extends State<SplashScreen> {
       _timer.cancel();
 
       if (await _authController.doLoginCheck()) {
-        Routes(context: context).navigateReplace(Home());
+        Routes(context: context).navigateReplace(const Home());
       } else {
         Routes(context: context).navigateReplace(const Login());
       }

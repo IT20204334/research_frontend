@@ -7,12 +7,11 @@ import 'package:indoortracking/Models/Utils/Common.dart';
 import 'package:indoortracking/Models/Utils/FirebaseStructure.dart';
 import 'package:indoortracking/Models/Utils/Images.dart';
 import 'package:indoortracking/Models/Utils/Routes.dart';
-import 'package:indoortracking/Models/Utils/Utils.dart';
 import 'package:indoortracking/Views/Home/HomeDrawer.dart';
 import 'package:indoortracking/Views/ProductManagement/productview.dart';
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();

@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -10,10 +9,9 @@ import 'package:indoortracking/Models/Utils/FirebaseStructure.dart';
 import 'package:indoortracking/Models/Utils/Images.dart';
 import 'package:indoortracking/Views/Widgets/custom_date_selector.dart';
 
-import '../Widgets/custom_button.dart';
 
 class History extends StatefulWidget {
-  History({Key? key}) : super(key: key);
+  const History({Key? key}) : super(key: key);
 
   @override
   _DiseasesState createState() => _DiseasesState();
@@ -269,7 +267,7 @@ class _DiseasesState extends State<History> {
       list.clear();
       for (DataSnapshot element in data.snapshot.children) {
         dynamic ele = element.value;
-        if (useFilters == true && start != null && end != null) {
+        if (useFilters == true) {
           DateTime currentDateTime =
               DateTime.fromMillisecondsSinceEpoch(ele['timestamp']);
           if (currentDateTime.isAfter(start) && currentDateTime.isBefore(end)) {

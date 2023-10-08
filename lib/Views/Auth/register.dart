@@ -13,7 +13,7 @@ import '../../Models/Utils/Routes.dart';
 import '../Widgets/custom_back_button.dart';
 
 class BusinessRegister extends StatefulWidget {
-  BusinessRegister({Key? key}) : super(key: key);
+  const BusinessRegister({Key? key}) : super(key: key);
 
   @override
   State<BusinessRegister> createState() => _BusinessRegisterState();
@@ -71,7 +71,7 @@ class _BusinessRegisterState extends State<BusinessRegister> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 20.0),
+                        padding: const EdgeInsets.only(top: 20.0),
                         child: Form(
                             key: _formKey,
                             child: Column(

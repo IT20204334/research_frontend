@@ -39,7 +39,7 @@ class CustomDateSelectorWithImage extends StatefulWidget {
           isIconAvailable: isIconAvailable,
           icon_img: icon_img,
           onConfirm: onConfirm,
-          backgroundColor: this.backgroundColor);
+          backgroundColor: backgroundColor);
 }
 
 class _CustomDateSelectorWithImageState
